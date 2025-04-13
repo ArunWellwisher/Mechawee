@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Mechawee - All-in-One Hub for creativity, growth, and value." />
+  <meta property="og:image" content="Mechawee_favicon.ico" />
+  <meta name="theme-color" content="#0a0a23" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>www.Mechawee.in</title>
+  <link rel="icon" href="Mechawee_favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header>
+    <div class="container nav-container">
+      <h1 class="logo">
+        <img src="Mechawee_favicon.ico" alt="MyHub Logo" />
+        <span class="logo-text">Mecha<span class="fire">wee</span></span>
+      </h1>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#portfolio">Personal Growth</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#ebooks">Ebooks</a></li>
+          <li><a href="#about">Portfolio</a></li>
+          <li><a href="#services">Business</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2 class="typewriter">Welcome to My All-in-One Website</h2>
+      <p class="typewriter-delay">Your central hub for growth and value.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Mechawee. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggleBtn = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('nav');
+
+    toggleBtn.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      toggleBtn.setAttribute('aria-expanded', isOpen);
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        toggleBtn.setAttribute('aria-expanded', false);
+      });
+    });
+  </script>
+</body>
+</html>
